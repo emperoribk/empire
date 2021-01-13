@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+<!Doctype html>
+<html>
+
+<head>
+    <title>Designer</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/item_list.css' %}">
+</head>
+<style>
+    p {
+        color: aquamarine;
+    }
+</style>
+
+<body>
+    {% block content %}
+    <h2 style="color:red;">Here are the list of items</h2>
+
+    {% for item in items %}
+    <p> {{item}} </p>
+
+    {% endfor %}
+
+    {% endblock content %}
+</body>
+
+</html>
